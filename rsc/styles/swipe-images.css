@@ -1,0 +1,98 @@
+.swipe-images {
+    position: relative;
+    padding: 1rem 5rem;
+}
+
+.images-swipe-content {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 10px);
+    gap: 12px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    user-select: none;
+}
+
+.images-swipe-content::-webkit-scrollbar {
+    display: none;
+}
+
+.swipe-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.6rem;
+    background: #888888;
+    border: solid 1px #443244;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #383838;
+    scroll-snap-align: start;
+    text-align: center;
+    transition: 0.5s ease all;
+}
+
+.swipe-image {
+    margin-bottom: 1rem;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    border: solid 2px #443244;
+    transition: 0.5s ease all;
+}
+
+.staff-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.backward, .forward {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background: #303030;
+    color: #E0E0E0;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: 1px solid #E0E0E0;
+    border-radius: 50%;
+    padding-top: 0.4rem;
+    cursor: pointer;
+    top: 60%;
+    transform: translateY(-50%);
+    transition: 0.5s ease all;
+    user-select: none;
+}
+
+.backward:hover,
+.forward:hover {
+    background: #368547;
+    width: 3.4rem;
+    height: 3.4rem;
+    padding: 0.6rem;
+}
+
+.backward {
+    left: 3.7rem;
+}
+
+.forward {
+    right: 3.8rem;
+}
+
+@media screen and (max-width: 1070px) {
+    .images-swipe-content {
+        grid-auto-columns: calc((100% / 2) - 10px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .images-swipe-content {
+        grid-auto-columns: 100%;
+    }
+    .swipe-image {
+        width: 10rem;
+        height: 10rem;
+    }
+}

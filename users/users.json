@@ -1,0 +1,44 @@
+[
+	{
+		"username": "hafsah hamzah",
+		"password": "hafsah",
+		"email": "hafsah@noor.com",
+		"number": "08098876633",
+		"type": "admin"
+	},
+	{
+		"username": "muhammad sadik",
+		"password": "muhammad",
+		"email": "muhammad@noor.com",
+		"number": "123456789",
+		"type": "finance"
+	},
+	{
+		"username": "sulaiman abdulquddus",
+		"password": "sule",
+		"email": "sulaiman@noor.com",
+		"number": "08098876633",
+		"type": "principal"
+	},
+	{
+		"username": "kausar hassan",
+		"password": "12345",
+		"email": "kausar@gmail.com",
+		"number": "08987363636",
+		"type": "staff"
+	},
+	{
+		"username": "usman faisal",
+		"password": "12345",
+		"email": "usman@noor.com",
+		"number": "12345678910",
+		"type": "parent"
+	},
+	{
+		"username": "faisal umar",
+		"password": "12345",
+		"email": "faisal@noor.com",
+		"number": "12345678910",
+		"type": "parent"
+	}
+]

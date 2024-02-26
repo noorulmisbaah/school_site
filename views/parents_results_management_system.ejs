@@ -1,0 +1,74 @@
+<%- include('./partials/srms_headers.ejs') %>
+ 
+    <div class="notification-box">
+        <div>
+            <p class="box-title"></p>
+            <p class="box-content"></p>
+            <button class="close-notification-box">Close</button>
+        </div>
+    </div>
+    <div class="top-head">
+        <p class="srms-top-text">Students' Results Management System</p>
+    </div>
+    <p class="welcome-text">
+        Welcome to Salsabeel Tahfeez College SRMS
+    </p>
+    <div class="information result-information" style="display: block;">
+        <div class="information-header">
+            <p class="header-title">View Results</p>
+        </div>
+        <div class="wrapper">
+            <p class="subhead">Basic Information</p>
+            <div class="process-result-form">
+                <div>
+                    <label for="student-name-field">Student name</label><br>
+                    <select id="student-name-field">
+                        <% children.forEach(child => { %>
+                            <option> <%= child.studentName.toUpperCase() %> </option>
+                        <% }) %>
+                    </select>
+                </div>
+                <div>
+                    <label for="year-of-exam">Examination Year</label><br>
+                    <select id="year-of-exam">
+                        <option>2021</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="term-of-exam">Examination term</label><br>
+                    <select id="term-of-exam">
+                        <option>First term</option>
+                        <option>Second term</option>
+                        <option>Third term</option>
+                    </select>
+                </div>
+            </div>
+            <button retrieve-result>Fetch Result</button>
+        </div>
+        <div class="wrapper result-view">
+            <p class="subhead">Result Information</p>
+            <p>Student's name: <b><span name-of-student></span></b></p>
+            <p>Examination year: <b><span year-of-examination></span></b></p>
+            <p>Examination term: <b><span term-of-examination></span></b></p>
+            <table>
+                <thead>
+                    <th>Subjects</th>
+                    <th>CA Scores</th>
+                    <th>Examination Scores</th>
+                    <th>Total Scores</th>
+                    <th>Grades</th>
+                </thead>
+                <tbody result-view-table>
+
+                </tbody>
+            </table>
+            <p>Average: <b><span examination-average></span></b></p>
+            <p>Total: <b><span examination-total></span></b></p>
+            <button download-result>Download</button>
+        </div>
+    </div>
+        
+<%- include('./partials/footer.ejs') %>

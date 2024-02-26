@@ -1,0 +1,42 @@
+{
+	"studentName": "kabiru usman",
+	"examinationYear": "2021",
+	"examinationTerm": "First term",
+	"total": 398,
+	"average": 79.6,
+	"selectedSubjects": [
+		"Agricultural Science",
+		"Basic Science",
+		"Civic Education",
+		"Computer Studies",
+		"Mathematics"
+	],
+	"testScores": [
+		34,
+		37,
+		34,
+		31,
+		37
+	],
+	"examScores": [
+		45,
+		48,
+		53,
+		40,
+		39
+	],
+	"totalScores": [
+		79,
+		85,
+		87,
+		71,
+		76
+	],
+	"grades": [
+		"A",
+		"A",
+		"A",
+		"A",
+		"A"
+	]
+}

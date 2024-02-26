@@ -1,0 +1,41 @@
+@media screen and (max-width: 900px) {
+    .navigations-side {
+        width: 40%;
+    }
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .navigations-side {
+        width: 50%;
+    }
+    .welcome-header {
+        font-size: 2.3rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        font-size: 17px;
+    }
+    .navigations-side {
+        width: 60%;
+    }
+    .welcome-header {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navigations-side {
+        width: 70%;
+    }
+    .welcome-header {
+        font-size: 1.7rem;
+    }
+}

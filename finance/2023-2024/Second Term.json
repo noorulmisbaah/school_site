@@ -1,0 +1,18 @@
+[
+	{
+		"date": "Fri Feb 23 2024",
+		"academicSession": "2023-2024",
+		"academicTerm": "Second Term",
+		"purpose": "Medical Purpose",
+		"amount": "8000",
+		"transactionMode": "Outcome"
+	},
+	{
+		"date": "Fri Feb 23 2024",
+		"academicSession": "2023-2024",
+		"academicTerm": "Second Term",
+		"purpose": "Games",
+		"amount": "7000",
+		"transactionMode": "Outcome"
+	}
+]

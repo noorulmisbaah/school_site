@@ -1,0 +1,189 @@
+<%- include('./partials/dashboard_header.ejs') %>
+<div class="notification-box">
+    <div>
+        <p class="box-title"></p>
+        <p class="box-content"></p>
+        <button class="close-notification-box">Close</button>
+    </div>
+</div>
+<div class="dashboard-header">
+    <h1>Dashboard</h1>
+    <img draggable="false" src="imgs/menu.png" class="menu-icon" alt="Menu Icon">
+</div>
+<div class="dashboard-page-sides">
+    <div class="navigations-side">
+        <img draggable="false" src="imgs/close.png" class="close-menu" alt="Close Menu Icon">
+        <ul>
+            <li class="side-link">School calendar</li>
+            <li class="side-link">School fees payment</li>
+            <li class="side-link">General financial records</li>
+            <li class="side-link">Fetch a record</li>
+            <li class="side-link">Enter a record</li>
+            <li class="side-link">Messages</li>
+        </ul>
+    </div>
+    <div class="content-side">
+        <div class="welcome-header">
+            <p user>School Financial Records</p>
+        </div>
+        <div class="information">
+            <div class="information-header">
+                <p class="header-title">School Calendar</p>
+                <img draggable="false" class="close-information" src="imgs/close.png">
+            </div>
+            <div>
+                <p>Click the button to view the calendar for the term.</p>
+                <button view-calendar>View Calander</button>
+            </div>
+        </div>
+        <div class="information">
+            <div class="information-header">
+                <p class="header-title">School Fees Payment</p>
+                <img draggable="false" class="close-information" src="imgs/close.png">
+            </div>
+            <div>
+                <label for="student-name">Student's name<sup>*</sup></label><br>
+                <input type="text" id="student-name" student-name placeholder="Enter the student's name"><br>
+                <label for="student-class">Student's class<sup>*</sup></label><br>
+                <select id="student-class" student-class>
+                    <% classes.forEach(classNumber => { %>
+                        <option> <%= classNumber %> </option>
+                    <% }) %>
+                </select><br>
+                <div style="margin: 1rem 0 1rem 0;">
+                    <input type="radio" id="partial-payment" name="payment-mode" value="partial-payment">
+                    <label for="partial-payment">Partial Payment</label><br>
+                    <input type="radio" id="complete-payment" name="payment-mode" value="complete-payment">
+                    <label for="complete-payment">Complete Payment</label><br>
+                </div>
+                <label for="payment-field">Amount paid<sup>*</sup></label><br>
+                <input type="number" placeholder="Enter the amount paid..." payment-amount min="0"><br>
+                <button make-payment>Make Payment</button>
+            </div>
+        </div>
+        <div class="information">
+            <div class="information-header">
+                <p class="header-title">Financial Records</p>
+                <img draggable="false" class="close-information" src="imgs/close.png">
+            </div>
+            <div financial-records hidden><% JSON.stringify(records) %></div>
+            <div>
+                <% if (records.length < 1) { %>
+                    <p>No records to show.</p>
+                <% } else { %>
+                    <p class="subhead">General Financial Records</p>
+                    <table width="100%" border="1">
+                        <thead>
+                            <th>Date</th>
+                            <th>Transaction Mode</th>
+                            <th>Purpose</th>
+                            <th>Session</th>
+                            <th>Term</th>
+                            <th>Amount (N)</th>
+                        </thead>
+                        <tbody>
+                            <% records.forEach(record => { %>
+                                <tr>
+                                    <td> <%= record.date %> </td>
+                                    <td> <%= record.transactionMode %> </td>
+                                    <td> <%= record.purpose %> </td>
+                                    <td> <%= record.academicSession %> </td>
+                                    <td> <%= record.academicTerm %> </td>
+                                    <td> <%= Number(record.amount).toLocaleString() %> </td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                <% } %>
+            </div>
+        </div>
+        <div class="information">
+            <div class="information-header">
+                <p class="header-title">Fetch a Record</p>
+                <img draggable="false" class="close-information" src="imgs/close.png">
+            </div>
+            <div>
+                <label for="academic-session-fetch-field">Academic session<sup>*</sup></label><br>
+                <select id="academic-session-fetch-field">
+                    <option>2023-2024</option>
+                    <option>2024-2025</option>
+                    <option>2025-2026</option>
+                    <option>2026-2027</option>
+                </select><br>
+                <label for="academic-term-fetch-field">Academic term<sup>*</sup></label><br>
+                <select id="academic-term-fetch-field">
+                    <option>First Term</option>
+                    <option>Second Term</option>
+                    <option>Third Term</option>
+                </select><br>
+                <button id="fetch-record">Fetch record</button>
+                <p class="subhead" id="transaction-title"></p>
+                <table id="transaction-table" width="100%" border="1" hidden>
+                    <thead>
+                        <th>Date</th>
+                        <th>Transaction Mode</th>
+                        <th>Purpose</th>
+                        <th>Session</th>
+                        <th>Term</th>
+                        <th>Amount (N)</th>
+                    </thead>
+                    <tbody id="preview-transaction-table">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="information">
+            <div class="information-header">
+                <p class="header-title">Enter a Record</p>
+                <img draggable="false" class="close-information" src="imgs/close.png">
+            </div>
+            <div>
+                <label for="purpose-field">Purpose</label><sup>*</sup><br>
+                <input id="purpose-field" type="text" placeholder="Enter the purpose..."><br>
+                <label>Transaction Mode</label><sup>*</sup><br>
+                <input id="income-radio" type="radio" name="transaction-mode" value="Income">
+                <label for="income-radio">Income</label><br>
+                <input id="outcome-radio" type="radio" name="transaction-mode" value="Outcome">
+                <label for="outcome-radio">Outcome</label><br>
+                <label for="session-field">Academic Session</label><sup>*</sup><br>
+                <select id="session-field">
+                    <option>2023-2024</option>
+                    <option>2024-2025</option>
+                    <option>2025-2026</option>
+                    <option>2026-2027</option>
+                </select><br>
+                <label for="term-field">Academic Term</label><sup>*</sup><br>
+                <select id="term-field">
+                    <option>First Term</option>
+                    <option>Second Term</option>
+                    <option>Third Term</option>
+                </select><br>
+                <label for="amount-field">Amount</label><sup>*</sup><br>
+                <input type="number" id="amount-field" placeholder="Enter the amount..."><br>
+                <button class="submit">Submit</button>
+            </div>
+        </div>
+        <div class="information">
+            <div class="information-header">
+                <p class="header-title">Messages</p>
+                <img draggable="false" class="close-information" src="imgs/close.png">
+            </div>
+            <div>
+                <% if (messages.length > 0) { 
+                    messages.forEach(message => { %>
+                        <div class="message">
+                            <p>Sent on: <span class="message-date"> <%= message.date %> </span></p>
+                            <p> <%= message.message %> </p>
+                        </div>
+                <% })
+                } else { %> 
+                    <p class="no-message">No messages to show.</p>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="scripts/finance-dashboard.js"></script>
+
+<%- include('./partials/footer.ejs') %>

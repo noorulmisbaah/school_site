@@ -1,0 +1,26 @@
+[
+	{
+		"date": "Fri Feb 23 2024",
+		"academicSession": "2024-2025",
+		"academicTerm": "First Term",
+		"purpose": "School fees payment",
+		"amount": "30000",
+		"transactionMode": "Income"
+	},
+	{
+		"date": "Fri Feb 23 2024",
+		"academicSession": "2024-2025",
+		"academicTerm": "First Term",
+		"purpose": "School fees payment",
+		"amount": "30000",
+		"transactionMode": "Income"
+	},
+	{
+		"date": "Fri Feb 23 2024",
+		"academicSession": "2024-2025",
+		"academicTerm": "First Term",
+		"purpose": "Electricity Bill",
+		"amount": "15000",
+		"transactionMode": "Outcome"
+	}
+]

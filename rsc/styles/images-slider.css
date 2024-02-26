@@ -1,0 +1,132 @@
+.images-slider {
+    padding: 5rem 10rem;
+}
+.slider-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.current-image {
+    width: 50rem;
+    height: 30rem;
+    border: 1px solid #835435;
+    border-radius: 3px;
+    align-self: center;
+    transition: 0.5s ease all;
+}
+
+.current-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.slider-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid #D66733;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.slider-images img {
+    width: 11rem;
+    height: 7rem;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: ease all 0.5s;
+}
+
+@media screen and (max-width: 1120px) {
+    .current-image {
+        height: 22rem;
+    }
+
+    .slider-images img {
+        width: 9rem;
+        height: 6rem;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .slider-content {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .current-image {
+        width: 90%;
+        height: 25rem;
+        margin-bottom: 3rem;
+    }
+
+    .slider-images {
+        flex-direction: row;
+    }
+
+    .slider-images img {
+        width: 7rem;
+        height: 4rem;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .current-image {
+        height: 23rem;
+    }
+
+    .slider-images img {
+        width: 6rem;
+        height: 3.7rem;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .current-image {
+        height: 20rem;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .current-image {
+        height: 18rem;
+    }
+
+    .slider-images img {
+        width: 5rem;
+        height: 3rem;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .current-image {
+        margin-bottom: 4rem;
+        height: 15rem;
+    }
+
+    .slider-images {
+        overflow-x: scroll;
+    }
+
+    .slider-images::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .current-image {
+        margin-bottom: 6rem;
+        height: 10rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .current-image {
+        margin-bottom: 6.6rem;
+        height: 7rem;
+    }
+}

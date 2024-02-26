@@ -1,0 +1,131 @@
+@media screen and (max-width: 1190px) {
+    .navigations-side {
+        width: 30%;
+    }
+    input[type="text"],
+    select {
+        width: 17rem;
+        height: 3rem;
+    }
+    .edit-field {
+        width: 7rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .navigations-side {
+        width: 35%;
+    }
+    .welcome-text {
+        font-size: 2.5rem;
+    }
+    .process-result-form {
+        flex-direction: column;
+    }
+    .process-result-form
+    input[type="text"],
+    select {
+        width: 100%;
+        height: 3.4rem;
+    }
+}
+
+@media screen and (max-width: 855px) {
+    body {
+        font-size: 18px;
+    }
+    .welcome-text {
+        font-size: 2.3rem;
+    }
+    .navigations-side {
+        width: 40%;
+    }
+    .subject-selection {
+        grid-template-columns: repeat(2, 50%);
+    }
+    .edit-btn {
+        width: 2.3rem;
+        height: 2.3rem;
+        margin-left: 0.3rem;
+    }
+    input[type="number"] {
+        width: 15rem;
+        height: 2.6rem;
+    }
+    .result-update input[type="number"] {
+        width: 8rem;
+        height: 3rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .result-update input[type="number"] {
+        width: 5rem;
+        height: 2.7rem;
+        font-size: 0.8rem;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .welcome-text {
+        font-size: 2rem;
+    }
+    .navigations-side {
+        width: 50%;
+    }
+    input[type="text"],
+    input[type="number"] {
+        width: 13rem;
+        height: 2.5rem;
+        font-size: 0.8rem;
+    }
+    .result-update input[type="number"] {
+        width: 5rem;
+        height: 2rem;
+        font-size: 0.8rem;
+    }
+    input[type="checkbox"] {
+        width: 0.4rem;
+        height: 0.4rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .welcome-text {
+        font-size: 1.7rem;
+    }
+    .srms-top-text {
+        font-size: 1.5rem;
+    }
+    .result-update input[type="number"] {
+        width: 3rem;
+        height: 2rem;
+        font-size: 0.8rem;
+        padding: 2px;
+    }
+    .edit-btn {
+        width: 2rem;
+        height: 2rem;
+        margin-left: 0.3rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .welcome-text {
+        font-size: 1.5rem;
+    }
+    .srms-top-text {
+        font-size: 1.3rem;
+    }
+    .navigations-side {
+        width: 70%;
+    }
+    .result-update input[type="number"] {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.8rem;
+    }
+}

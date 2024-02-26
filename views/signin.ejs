@@ -1,0 +1,26 @@
+<%- include('./partials/sign_header.ejs') %>
+    <p class="sign-welcome-text">Welcome to Salsabeel Tahfeez College sign in page</p>
+    <% if (!exists) { %>
+        <p class="error-text">
+            Error! <br>
+            Sorry, your username could not be found. Check your username and try again.
+            If you don't have an account or you still couldn't sign in, then meet the school head for help.
+        </p>
+    <% } else if (incorrectPassword) { %>
+        <p class="error-text">
+            Error! <br>
+            Sorry, your password is incorrect. Try again.
+        </p>
+    <% } %>
+    <form action="user" method="POST">
+        <p class="form-sign-text">Sign in</p>
+        <label for="username">Username<sup>*</sup></label><br>
+        <input id="username" name="username" type="text" placeholder="Enter your username here..." required><br>
+        <label for="password">Password<sup>*</sup></label><br>
+        <input id="password" name="password" type="password" placeholder="Enter your password here..." required><br>
+        <button type="submit">Sign in</button>
+        <p>Forgot your password? Click <a href="recovery" class="recover-account">here</a> to recover your account.</p>
+        <p>(<sup>*</sup>) indicates required fields.</p>
+    </form>
+
+<%- include('./partials/footer.ejs') %>

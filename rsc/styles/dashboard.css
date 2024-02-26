@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: Poppins;
+    font-size: 20px;
+    background: #E7E7E7;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+th, td {
+    padding: 1rem;
+}
+
+textarea,
+select,
+input[type="text"],
+input[type="number"] {
+    width: 50%;
+    height: 20rem;
+    resize: none;
+    outline: none;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-family: Poppins;
+    border-radius: 5px;
+    border: 1px solid #362134;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    height: 3.2rem;
+}
+
+button {
+    border: 1px solid #431452;
+    border-radius: 5px;
+    margin-top: 1rem;
+    width: 8rem;
+    height: 3rem;
+    outline: none;
+    font-family: inherit;
+    background: #803183;
+    color: #E7E7E7;
+    transition: 0.5s ease all;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #E7E7E7;
+    color: #803183;
+}
+
+a {
+    color: #866026;
+    text-decoration: none;
+}
+
+.dashboard-header {
+    position: relative;
+    background: #363049;
+    color: #E7E7E7;
+    padding: 0.5rem;
+}
+
+.menu-icon,
+.close-menu {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    right: 1rem;
+    top: 0;
+    cursor: pointer;
+    transition: 0.5s ease all;
+}
+
+.menu-icon {
+    top: 1rem;
+    width: 2.5rem;
+}
+
+.close-menu:hover {
+    transform: rotate(90deg)
+;}
+
+.dashboard-page-sides {
+    position: relative;
+}
+
+.navigations-side {
+    position: absolute;
+    left: -100rem;
+    width: 25%;
+    height: 100vh;
+    padding: 1rem;
+    background: #362134B0;
+    transition: 0.5s ease all;
+}
+
+.content-side {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.information {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    background: #C0C0C0;
+    display: none;
+    transition: 0.5s ease all;
+}
+
+.children {
+    background: #997597;
+    border-radius: 5px;
+    color: #E7E7E7;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.welcome-header {
+    padding: 1rem;
+    background: #882296;
+    color: #E7E7E7;
+    font-family: 'Segoe UI Semilight', Poppins;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.information-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-title {
+    font-family: 'Segoe UI Semilight', Nunito;
+    font-size: 2rem;
+    color: #882296;
+}
+
+.subhead {
+    font-family: 'Segoe UI Semilight', Nunito;
+    font-size: 1.6rem;
+    color: #258424;
+    margin-top: 1rem;
+}
+
+.text-list {
+    padding-left: 2rem;
+}
+
+.close-information {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    transition: 0.5s ease all;
+}
+
+.close-information:hover {
+    transform: rotate(90deg);
+}
+
+.child,
+.payment-status {
+    margin: 1rem 0;
+}
+
+.side-link {
+    list-style-type: none;
+    color: #E7E7E7;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: 0.5s ease all;
+}
+
+.side-link:hover {
+    background: #E7E7E7;
+    color: #525252;
+    border-radius: 5px;
+    padding-left: 3rem;
+}
+
+.message {
+    font-family: 'Segoe UI Semilight';
+    background: #969696;
+    border: 1px solid #882296;
+    border-radius: 5px;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.message-date {
+    color: #341097;
+}
+
+.username-text,
+.password-text,
+.email-text,
+.phone-text,
+.student-name-text,
+.student-class-text,
+.student-parent-text,
+.student-class-text,
+.student-admission-date-text {
+    font-weight: bold;
+}
+
+.username-text,
+.student-name-text,
+.student-parent-text {
+    text-transform: capitalize;
+}

@@ -1,0 +1,30 @@
+<%- include('./partials/sign_header.ejs') %>
+
+    <p class="sign-welcome-text">Register a New User</p>
+
+    <% if(exists) { %>
+        <p class="error-text">Error! <br> Registeration failed because a user with the same username exists.</p>
+    <% } else if(done) { %>
+        <p class="success-text">The new user has been registered successfully.</p>
+    <% } %>
+
+    <form action="signup_user" method="POST">
+        <p class="form-sign-text">Register user</p>
+        <label for="username">Username<sup>*</sup></label><br>
+        <input type="text" id="username" name="username" placeholder="Username here..." required><br>
+        <label for="password">Password<sup>*</sup></label><br>
+        <input type="password" id="password" name="password" placeholder="Password here..." required><br>
+        <label for="email">Email<sup>*</sup></label><br>
+        <input type="email" id="email" name="email" placeholder="Email here..." required><br>
+        <label for="number">Phone number<sup>*</sup></label><br>
+        <input type="number" id="number" name="number" required placeholder="Phone number here..."><br>
+        <label>User type<sup>*</sup></label><br>
+        <input id="parent" name="type" type="radio" value="parent" required>
+        <label for="parent">Parent</label><br>
+        <input id="teacher" name="type" type="radio" value="staff" required>
+        <label for="teacher">Teacher</label><br>
+        <button type="submit">Register</button>
+        <p>(<sup>*</sup>) indicates required fields.</p>
+    </form>
+
+<%- include('./partials/footer.ejs') %>

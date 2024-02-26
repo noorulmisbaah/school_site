@@ -1,0 +1,78 @@
+.notification-box {
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    min-height: 15rem;
+    font-family: 'Segoe UI Semilight';
+    padding: 1rem 8rem;
+    background: #907297;
+    transition: 0.5s ease all;
+}
+
+.box-title,
+.box-content {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.box-content {
+    font-size: 1.4rem;
+    color: #272121;
+}
+
+.close-notification-box {
+    width: 9rem;
+    height: 2.6rem;
+    margin-bottom: 0;
+    font-family: inherit;
+    background: #655069;
+    border: 1px #C0C0C0 solid;
+    border-radius: 0;
+    outline: none;
+}
+
+.close-notification-box:hover {
+    border-radius: 5px;
+    border-color: #373842;
+}
+
+@media screen and (max-width: 1000px) {
+    .notification-box {
+        padding: 1rem 6rem;
+    }
+    .box-content {
+        font-size: 1.7rem;
+    }
+
+    .box-content {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .notification-box {
+        padding: 1rem 4rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .notification-box {
+        padding: 1rem 2rem;
+        min-height: 9rem;
+    }
+    .box-title {
+        font-size: 1.4rem;
+    }
+    .box-content {
+        font-size: 1rem;
+    }
+    .close-notification-box {
+        width: 6rem;
+        height: 2.2rem;
+    }
+}
+

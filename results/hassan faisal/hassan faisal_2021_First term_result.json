@@ -1,0 +1,42 @@
+{
+	"studentName": "hassan faisal",
+	"examinationYear": "2021",
+	"examinationTerm": "First term",
+	"total": 363,
+	"average": 72.6,
+	"selectedSubjects": [
+		"Agricultural Science",
+		"Computer Studies",
+		"Hadith",
+		"Home Economics",
+		"Mathematics"
+	],
+	"testScores": [
+		32,
+		33,
+		21,
+		36,
+		21
+	],
+	"examScores": [
+		39,
+		53,
+		48,
+		42,
+		38
+	],
+	"totalScores": [
+		71,
+		86,
+		69,
+		78,
+		59
+	],
+	"grades": [
+		"A",
+		"A",
+		"B",
+		"A",
+		"C"
+	]
+}

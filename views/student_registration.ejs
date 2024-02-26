@@ -1,0 +1,37 @@
+<%- include('./partials/sign_header.ejs') %>
+
+    <p class="sign-welcome-text">Register a New Student</p>
+
+    <% if(studentExists) { %>
+        <p class="error-text">Error! <br>Registeration failed because a student with the same name exists in the class.</p>
+    <% } else if (!parentExists) { %>
+        <p class="error-text">Error! <br>Registeration failed because the parent is not found. Make sure the parent is registered.</p>
+    <% } else if (done) { %>
+        <p class="success-text">The student user has been registered successfully.</p>
+    <% } %>
+
+    <form action="student_registration" method="POST">
+        <p class="form-sign-text">Register student</p>
+        <label for="student_name">Student name<sup>*</sup></label><br>
+        <input type="text" id="student_name" name="studentName" placeholder="Student name here..." required><br>
+        <label for="parent_name">Parent's full name<sup>*</sup></label><br>
+        <input type="text" id="parent_name" name="parentName" placeholder="Parent's name here..." required><br>
+        <label for="admission_date">Addmission date<sup>*</sup></label><br>
+        <input type="date" id="admission_date" name="admissionDate" placeholder="Addmission date here..." required><br>
+        <label for="student_class">Student's class<sup>*</sup></label><br>
+        <select name="studentClass" id="student_class">
+            <option value="Nursery 1">Nursery 1</option>
+            <option value="Nursery 2">Nursery 2</option>
+            <option value="Pre-nursery">Pre-nursery</option>
+            <option value="Primary 1">Primary 1</option>
+            <option value="Primary 2">Primary 2</option>
+            <option value="Primary 3">Primary 3</option>
+            <option value="JSS 1">JSS 1</option>
+            <option value="JSS 2">JSS 2</option>
+            <option value="JSS 3">JSS 3</option>
+        </select>
+        <button type="submit">Register</button>
+        <p>(<sup>*</sup>) indicates required fields.</p>
+    </form>
+
+<%- include('./partials/footer.ejs') %>

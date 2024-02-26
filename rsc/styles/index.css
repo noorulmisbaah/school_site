@@ -1,0 +1,321 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins;
+    font-size: 20px;
+}
+
+header {
+    padding: 0.5rem 2rem;
+    position: relative;
+}
+
+textarea {
+    width: 20rem;
+    height: 20rem;
+    resize: none;
+    outline: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-family: 'Segoe UI Semilight', Nunito;
+    border-radius: 5px;
+}
+
+button {
+    width: 120px;
+    height: 50px;
+    border: #172513 1px solid;
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 5px;
+    outline: none;
+    font-family: inherit;
+    background: #459625;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: 0.5s ease all;
+}
+
+button:hover {
+    background: #E0E0E0;
+    color: #459625;
+    border-radius: 4rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 1rem;
+    width: 97%;
+    height: 3rem;
+    outline: none;
+    margin-bottom: 1rem;
+    border: 1px solid #192516;
+    border-radius: 5px;
+}
+
+section {
+    margin: 0.9rem 0;
+}
+
+footer {
+    padding: 10rem 0 2rem 0;
+    background: #888888;
+    color: #000000;
+    text-align: center;
+}
+
+#home {
+    width: 100%;
+    height: 80vh;
+    background-image: url('../imgs/kids.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    box-shadow: 0 10px 5px #273522;
+}
+
+.school-logo {
+    width: 20rem;
+    height: 4rem;
+}
+
+.header-links {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    background: #427533E7;
+    padding-top: 3rem;
+    border: 1px solid #172513;
+    border-radius: 5px;
+    right: 1rem;
+    top: -100rem;
+    z-index: 1;
+    transition: 0.5s ease all;
+}
+
+.header-link {
+    text-decoration: none;
+    color: #E0E0E0;
+    padding: 7px 10px;
+    border: 1px solid #427533;
+    border-radius: 5px;
+    transition: 0.5s ease all;
+    margin: 10px;
+}
+
+.header-link:hover {
+    color: #427533;
+    border-color: #273522;
+    background: #E0E0E0;
+    padding-left: 3rem;
+}
+
+.menu-icon, 
+.close-menu-icon,
+.login-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    right: 1rem;
+    position: absolute;
+    cursor: pointer;
+}
+
+.menu-icon, .login-icon {
+    top: 1rem;
+}
+
+.login-icon {
+    right: 5rem;
+    transition: 0.5s ease all;
+}
+
+.close-menu-icon {
+    width: 2rem;
+    height: 2rem;
+    top: 1rem;
+    transition: 0.5s ease all;
+}
+
+.close-menu-icon:hover,
+.close-info:hover {
+    transform: rotate(90deg);
+}
+
+.cover-image-content {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 14%;
+    background: #3557297E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cover-image-content h1 {
+    font-family: Nunito;
+    font-size: 3rem;
+    color: #FFFFFF;
+}
+
+.cover-image-content h2 {
+    font-size: 2.4rem;
+    color: #38E721;
+}
+
+.section-content {
+    padding: 5% 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    border-bottom: 2px solid #020202;
+    color: #535353;
+    margin-bottom: 1.8rem;
+    text-align: center;
+}
+
+.info {
+    position: fixed;
+    top: 5rem;
+    z-index: 1;
+    max-height: 40rem;
+    min-width: 25rem;
+    max-width: 30rem;
+    overflow: auto;
+    background: #679275ce;
+    transform: scale(0);
+    padding: 2rem;
+    border: 2px solid #427533;
+    border-radius: 5px;
+    transition: 0.5s ease all;
+}
+
+.info::-webkit-scrollbar {
+    visibility: hidden;
+}
+
+.info-title {
+    margin-bottom: 1rem;
+    font-size: 2.3rem;
+    font-weight: bold;
+    color:#FFFFFF;
+}
+
+.close-info {
+    position: absolute;
+    cursor: pointer;
+    width: 1.8rem;
+    height: 1.8rem;
+    right: 1rem;
+    top: 1rem;
+    transition: 0.5s ease all;
+}
+
+.teacher-info {
+    margin-bottom: 1.7rem;
+}
+
+.image {
+    width: 70%;
+    margin: 2rem;
+}
+
+.column {
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.7rem;
+    border-radius: 5px;
+}
+
+.column-text {
+    font-size: 1.3rem;
+}
+
+.column-image img {
+    width: 18rem;
+    height: 18rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.box{
+    width: 17rem;
+    height: auto;
+    padding: 2rem;
+    border-radius: 5px;
+    border: 1px solid #172513;
+    color: #FFFFFF
+}
+
+.address {
+    margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 1080px) {
+    .header-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        top: -3rem;
+        right: 5%;
+        background: none;
+        border: none;
+        width: 70%;
+    }
+
+    .school-logo {
+        width: 15rem;
+        height: 3rem;
+    }
+
+    .menu-icon, .close-menu-icon {
+        display: none;
+    }
+
+    .login-icon {
+        right: 1rem;
+        z-index: 1;
+    }
+
+    .header-link {
+        border: none;
+        color: #121212;
+    }
+
+    .header-link:hover {
+        background: #306929;
+        color: #E0E0E0;
+        padding: 7px 10px;
+        border: none;
+    }
+
+    .column {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .column-text {
+        width: 50%;
+        text-align: justify;
+    }
+
+    .column-image img {
+        margin: 0;
+    }
+}

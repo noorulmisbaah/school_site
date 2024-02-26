@@ -1,0 +1,87 @@
+<%- include('./partials/dashboard_header.ejs') %>
+
+    <div class="dashboard-header">
+        <h1>Dashboard</h1>
+        <img draggable="false" src="imgs/menu.png" class="menu-icon" alt="Menu Icon">
+    </div>
+    <div class="dashboard-page-sides">
+        <div class="navigations-side">
+            <ul>
+                <li class="side-link">School calendar</li>
+                <li class="side-link">School activities</li>
+                <li class="side-link">Lesson timetables</li>
+                <li class="side-link">Upload result</li>
+                <li class="side-link">Messages</li>
+            </ul>
+        </div>
+        <div class="content-side">
+            <div class="welcome-header">
+                <p>You're welcome, <%= username.toUpperCase() %></p>
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">School Calendar</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <div>
+                    <p>Click the button to view the calendar for the term.</p>
+                    <button view-calendar>View Calander</button>
+                </div>
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">School Activities</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <div>
+                    <p>
+                        The school operates for approximately to 8 hours. Beginning from Sundays to Thursdays, the college section
+                        begins its activities from 8 am to nearly 4 pm, while the nursery and primary section
+                        begins its activities from 8 am to 3 pm. The nursery and primary section does not operate on
+                        Sundays. On Fridays, the college section closes at 12:15 pm, while the nursery and primary section 
+                        closes at 12:00 pm.
+                    </p>
+                </div>
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">Lessons Timetables</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <div>
+                    <p>You'll find messages waiting for you here.</p>
+                </div>
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">Upload Student's Result</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <form action="staff_results_management_system" method="post">
+                    <p>Click the button below to process and upload results.</p>
+                    <button type="submit">Go to SRMS</button>
+                </form>
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">Messages</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <div>
+                    <% if (messages.length > 0) { 
+                        messages.forEach(message => { %>
+                            <div class="message">
+                                <p>Sent on: <span class="message-date"> <%= message.date %> </span></p>
+                                <p> <%= message.message %> </p>
+                            </div>
+                    <% })
+                    } else { %> 
+                        <p class="no-message">No messages to show.</p>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/teachers-dashboard.js"></script>
+
+<%- include('./partials/footer.ejs') %>

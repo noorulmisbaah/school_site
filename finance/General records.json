@@ -1,0 +1,58 @@
+[
+	{
+		"date": "Fri Feb 23 2024",
+		"academicSession": "2023-2024",
+		"academicTerm": "First Term",
+		"purpose": "School fees payment",
+		"amount": "25000",
+		"transactionMode": "Income"
+	},
+	{
+		"date": "Fri Feb 23 2024",
+		"academicSession": "2023-2024",
+		"academicTerm": "First Term",
+		"purpose": "Electricity Bill",
+		"amount": "10000",
+		"transactionMode": "Outcome"
+	},
+	{
+		"date": "Fri Feb 23 2024",
+		"academicSession": "2023-2024",
+		"academicTerm": "Second Term",
+		"purpose": "Medical Purpose",
+		"amount": "8000",
+		"transactionMode": "Outcome"
+	},
+	{
+		"date": "Fri Feb 23 2024",
+		"academicSession": "2023-2024",
+		"academicTerm": "Second Term",
+		"purpose": "Games",
+		"amount": "7000",
+		"transactionMode": "Outcome"
+	},
+	{
+		"date": "Fri Feb 23 2024",
+		"academicSession": "2024-2025",
+		"academicTerm": "First Term",
+		"purpose": "School fees payment",
+		"amount": "30000",
+		"transactionMode": "Income"
+	},
+	{
+		"date": "Fri Feb 23 2024",
+		"academicSession": "2024-2025",
+		"academicTerm": "First Term",
+		"purpose": "School fees payment",
+		"amount": "30000",
+		"transactionMode": "Income"
+	},
+	{
+		"date": "Fri Feb 23 2024",
+		"academicSession": "2024-2025",
+		"academicTerm": "First Term",
+		"purpose": "Electricity Bill",
+		"amount": "15000",
+		"transactionMode": "Outcome"
+	}
+]

@@ -1,0 +1,191 @@
+<%- include('./partials/dashboard_header.ejs') %>
+    <div class="dashboard-header">
+        <h1>Dashboard</h1>
+        <img draggable="false" src="imgs/menu.png" class="menu-icon" alt="Menu Icon">
+    </div>
+    <div class="dashboard-page-sides">
+        <div class="navigations-side">
+            <img draggable="false" src="imgs/close.png" class="close-menu" alt="Close Menu Icon">
+            <ul>
+                <li class="side-link">School calendar</li>
+                <li class="side-link">School activities</li>
+                <li class="side-link">Payment status</li>
+                <li class="side-link">Attendance</li>
+                <li class="side-link">Lateness</li>
+                <li class="side-link">Medical conditions</li>
+                <li class="side-link">Messages</li>
+                <li class="side-link">View results</li>
+            </ul>
+        </div>
+        <div class="content-side">
+            <div class="welcome-header">
+                <p>You're welcome, <%= username.toUpperCase() %></p>
+            </div>
+            <div class="children">
+                <% if (children.length < 1) { %>
+                    <p>No children to show.</p>
+                <% } else {
+                    children.forEach(child => { %>
+                        <div class="child">
+                            <p>Student name: <%= child.studentName.toUpperCase() %></p>
+                            <p>Class: <%= child.studentClass %> </p>
+                            <p>Admission date: <%= child.admissionDate %></p>
+                        </div>
+                    <% })
+                } %>
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">School Calender</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <div>
+                    <p>Click the button to view the calendar for the term.</p>
+                    <button view-calendar>View Calander</button>
+                </div>
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">School Activities</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <div>
+                    <p>
+                        The school operates for approximately to 8 hours. Beginning from Sundays to Thursdays, the college section
+                        begins its activities from 8 am to nearly 4 pm, while the nursery and primary section
+                        begins its activities from 8 am to 3 pm. The nursery and primary section does not operate on
+                        Sundays. On Fridays, the college section closes at 12:15 pm, while the nursery and primary section 
+                        closes at 12:00 pm.
+                    </p>
+                </div>
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">Payment Status</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <div>
+                    <% if (children.length < 1) { %>
+                        <p>Nothing to show here.</p>
+                    <% } else { %>
+                        <p class="subhead">Payment status for your children</p>
+                        <% children.forEach(child => { %>
+                            <div class="payment-status">
+                                <p>Child name: <%= child.studentName.toUpperCase() %> </p>
+                                <% if (child.paymentMade === '') { %>
+                                    <p>Payment status: No amount was paid.</p>
+                                <% } else { %>
+                                    <p>Total amount paid: #<%= child.paymentMade.toLocaleString() %></p>
+                                    <p>Payment status: <%= child.payment.toUpperCase() %> </p>
+                                <% } %>
+                            </div>
+                        <% })
+                    } %>
+                </div>
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">Attendance Policy</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <div>
+                    <p class="subhead">Why is attendance important?</h3>
+                    <ul class="text-list">
+                        <li>There is a link between good school attendance and high level attainment.</li>
+                        <li>Good attendance promotes children's welfare and safeguarding.</li>
+                        <li>It enables pupils to access the widest possible range of opportunities.</li>
+                        <li>It encourages good friendships with peers.</li>
+                    </ul>
+                    <p>
+                        Regular school attendance is an important part of giving your child the best possible start
+                        in life and is important to your child's future.
+                    </p>
+                    <p class="subhead">What can you do to help?</p>
+                    <ul class="text-list">
+                        <li>Find out what date each term starts and make sure your child is ready.</li>
+                        <li>Build regular routines for bedtime and the morning. Primary children need about
+                            to hours of sleep each night.
+                        </li>
+                        <li>Talk about the importance of regular attendance and how child feels about school.</li>
+                    </ul>
+                    <p class="subhead">Unauthorised Leave in Term Time</p>
+                    <p>
+                        Children are not entitled to holidays during the school term. Family breaks/holidays 
+                        should be taken during the holiday periods.
+                    </p>
+                </div>
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">Lateness</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <div>
+                    <p>
+                        Children arriving late may seriously disrupt not only their continuity of learning but 
+                        also that of others. If your child is late to school, they might:
+                    </p>
+                    <ul class="text-list">
+                        <li>Be embarrassed or unsetteled</li>
+                        <li>Miss important information</li>
+                        <li>Miss the start of the learning</li>
+                        <li>Miss opportunities to socialise with their friends at the start of the school day.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">Medical Conditions</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <div>
+                    <p class="subhead">Illness - Too ill to attend school?</p>
+                    <p class="section-text">
+                    Your child can attend school with minor ailments such as headache, stomach ache, or cold. Over
+                    the counter medicines can be given before school. Also, the school has some over the counter
+                    medicines. The school contact you if your child becomes too ill to remain in school. If
+                    your child has diarrhoa or vomiting (or other symptoms of cholera or typhoid), they should
+                    not return to school until at least 48 hours after the last episode or symptom. Children are
+                    <b>not allowed</b> to handle any form of medicine (whether prescription or over the counter medicine)
+                    in the school.<br>
+                    If you are unsure how long your child should be absent with an illness, please inform the 
+                    school management as soon as possible.
+                </p>
+                </div>
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">Messages</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <div>
+                    <% if (messages.length > 0) { 
+                        messages.forEach(message => { %>
+                            <div class="message">
+                                <p>Sent on: <span class="message-date"> <%= message.date %> </span></p>
+                                <p> <%= message.message %> </p>
+                            </div>
+                    <% })
+                    } else { %> 
+                        <p class="no-message">No messages to show.</p>
+                    <% } %>
+                </div>
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">View Results</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <form action="parents_results_management_system" method="POST">
+                    <div>
+                        <p>Click the button below to view or download the results of your children.</p>
+                    </div>
+                    <input type="text" hidden value="<%= username %>" name="username">
+                    <button type="submit">Go to SRMS</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/parents-dashboard.js"></script>
+
+<%- include('./partials/footer.ejs') %>
